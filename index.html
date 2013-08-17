@@ -26,7 +26,7 @@
                 </p>
             </div>
         </div>
-        <form action="" class="worksheet" enctype="multipart/form-data" method="POST">
+        <form action="#ya_otpravila" class="worksheet" enctype="multipart/form-data" method="POST" onsubmit="return validateMyForm();">
             <div class="worksheet__title">
                 Заполните анкету
             </div>
@@ -38,6 +38,9 @@
                     Год рождения.
                 </div>
                 <textarea class="worksheet__question__input" name="answer[1]"></textarea>
+                <div class="worksheet__question__question__input__error">
+                    Неверный год рождения.
+                </div>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -65,6 +68,9 @@
                     Год окончания вуза.
                 </div>
                 <textarea class="worksheet__question__input" name="answer[4]"></textarea>
+                <div class="worksheet__question__question__input__error">
+                    Неверный год окончания вуза.
+                </div>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -248,6 +254,9 @@
                     Ссылка на профиль в Моем Круге
                 </div>
                 <input class="worksheet__question_line__input" name="Moi_krug_lnk">
+                <div class="worksheet__question__question__input__error">
+                    Неверная ссылка.
+                </div>
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
@@ -269,6 +278,9 @@
                     E-mail 
                 </div>
                 <input class="worksheet__question_line__input" name="email">
+                <div class="worksheet__question__question__input__error">
+                    Неверный e-mail.
+                </div>
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
@@ -284,6 +296,9 @@
             </div>
             <div class="worksheet__agreement">
                 <input class="worksheet__agreement__checkbox" name="personal_data" type="checkbox">Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+                <div class="worksheet__question__question__input__error" id="personal_data">
+                    Подтвердите, пожалуйста, своё согласие на передачу анкеты с вашими персональными данными.
+                </div>
             </div>
             <div class="worksheet__confirm_buttons">
                 <input class="button__white__send" type="submit" value="Отправить"><input class="button__white__clear" type="reset" value="Очистить">

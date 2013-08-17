@@ -19,12 +19,13 @@ html lang="ru-RU"
         p 
           |Подробности о Школе читайте на 
           a href="http://events.yandex.ru/shri/" этой странице.
-    form.worksheet action="" method="POST" enctype="multipart/form-data"
+    form.worksheet action="#ya_otpravila" onsubmit="return validateMyForm();" method="POST" enctype="multipart/form-data" 
       .worksheet__title Заполните анкету
       .worksheet__question
         .worksheet__question__number Вопрос 1
         .worksheet__question__question Год рождения.
         textarea.worksheet__question__input name="answer[1]"
+        .worksheet__question__question__input__error Неверный год рождения.
       .worksheet__question
         .worksheet__question__number Вопрос 2
         .worksheet__question__question Город, в котором вы живёте.
@@ -37,6 +38,7 @@ html lang="ru-RU"
         .worksheet__question__number Вопрос 4
         .worksheet__question__question Год окончания вуза.
         textarea.worksheet__question__input name="answer[4]"
+        .worksheet__question__question__input__error Неверный год окончания вуза.
       .worksheet__question
         .worksheet__question__number Вопрос 5
         .worksheet__question__question 
@@ -142,6 +144,7 @@ html lang="ru-RU"
       .worksheet__question_line
         .worksheet__question_line__question Ссылка на профиль в Моем Круге
         input.worksheet__question_line__input name="Moi_krug_lnk"
+        .worksheet__question__question__input__error Неверная ссылка.
       .worksheet__question_line
         .worksheet__question_line__question Имя, Фамилия
         input.worksheet__question_line__input name="name__surname"
@@ -152,6 +155,7 @@ html lang="ru-RU"
       .worksheet__question_line
         .worksheet__question_line__question E-mail 
         input.worksheet__question_line__input name="email"
+        .worksheet__question__question__input__error Неверный e-mail.
       .worksheet__question_line
         .worksheet__question_line__question Дополнительные сведения 
         textarea.worksheet__question_line__input_large name="extra_date"
@@ -178,6 +182,7 @@ html lang="ru-RU"
       .worksheet__agreement
         input.worksheet__agreement__checkbox type="checkbox" name="personal_data"
         |Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+        .worksheet__question__question__input__error id="personal_data" Подтвердите, пожалуйста, своё согласие на передачу анкеты с вашими персональными данными.
       .worksheet__confirm_buttons
         input.button__white__send type="submit" value="Отправить"
         input.button__white__clear type="reset" value="Очистить"

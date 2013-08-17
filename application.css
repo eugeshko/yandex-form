@@ -144,3 +144,15 @@ input.button__white__send:hover, input.button__white__clear:hover, select.worksh
 select.worksheet__question_line__choose_file__button {
   -webkit-appearance: none;
 }
+
+.worksheet__question__question__input__error {
+  display: none;
+  margin-left: 20%;
+  padding-left: 2px;
+  color: red;
+  font-weight: normal;
+}
+
+#personal_data {
+  margin-left: 0;
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru-RU">
     <head>
         <link href="application.css" rel="stylesheet" type="text/css">
         <script src="jquery-1.10.2.min.js" type="text/javascript"></script>
-        <script src="jquerry.js" type="text/javascript"></script>
+        <script src="application.js" type="text/javascript"></script>
         <title>
             Анкета второй Школы разработки интерфейсов в Москве
         </title>
@@ -26,7 +26,7 @@
                 </p>
             </div>
         </div>
-        <div class="worksheet">
+        <form action="" class="worksheet" enctype="multipart/form-data" method="POST">
             <div class="worksheet__title">
                 Заполните анкету
             </div>
@@ -37,7 +37,7 @@
                 <div class="worksheet__question__question">
                     Год рождения.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[1]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -46,7 +46,7 @@
                 <div class="worksheet__question__question">
                     Город, в котором вы живёте.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[2]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -55,7 +55,7 @@
                 <div class="worksheet__question__question">
                     Вуз, факультет, специальность, кафедра.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[3]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -64,7 +64,7 @@
                 <div class="worksheet__question__question">
                     Год окончания вуза.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[4]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -74,13 +74,13 @@
                     Уровень владения английским языком:
                 </div>
                 <p>
-                    <input class="worksheet__question__checkbox" type="checkbox">начальный;</input>
+                    <input class="worksheet__question__checkbox" name="answer[5][chekbox][1]" type="checkbox">начальный;</input>
                 </p>
                 <p>
-                    <input class="worksheet__question__checkbox" type="checkbox">средний;</input>
+                    <input class="worksheet__question__checkbox" name="answer[5][chekbox][2]" type="checkbox">средний;</input>
                 </p>
                 <p>
-                    <input class="worksheet__question__checkbox" type="checkbox">свободное владение.</input>
+                    <input class="worksheet__question__checkbox" name="answer[5][chekbox][3]" type="checkbox">свободное владение.</input>
                 </p>
                 <textarea class="worksheet__question__input"></textarea>
             </div>
@@ -91,7 +91,7 @@
                 <div class="worksheet__question__question">
                     Чего вы ожидаете от участия в Школе?
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[6]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -100,7 +100,7 @@
                 <div class="worksheet__question__question">
                     Откуда вы о нас узнали?
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[7]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -109,7 +109,7 @@
                 <div class="worksheet__question__question">
                     Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[8]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -118,7 +118,7 @@
                 <div class="worksheet__question__question">
                     Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[9]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -127,7 +127,7 @@
                 <div class="worksheet__question__question">
                     Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[10]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -136,7 +136,7 @@
                 <div class="worksheet__question__question">
                     Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[11]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -145,7 +145,7 @@
                 <div class="worksheet__question__question">
                     Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью? С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[12]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -162,7 +162,7 @@
                         В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/">http://jsfiddle.net/ </a>с вашим кодом или на ваш репозиторий на <a href="https://github.com/">https://github.com/</a>.
                     </p>
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[13]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -185,7 +185,7 @@
                         В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/">http://jsfiddle.net/</a>с вашим кодом или на ваш репозиторий на <a href="https://github.com/">https://github.com/</a>.
                     </p>
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[14]"></textarea>
             </div>
             <div class="worksheet__question">
                 <div class="worksheet__question__number">
@@ -230,7 +230,7 @@
                         Разработку необходимо вести на <a href="https://github.com/">https://github.com/</a>. В качестве ответа на вопрос пришлите ссылку на проект.
                     </p>
                 </div>
-                <textarea class="worksheet__question__input"></textarea>
+                <textarea class="worksheet__question__input" name="answer[15]"></textarea>
             </div>
             <div class="worksheet__title">
                 Расскажите нам о себе
@@ -240,31 +240,26 @@
                     Резюме до 250 КБ 
                 </div>
                 <div class="worksheet__question_line__choose_file">
-                    <div class="worksheet__question_line__choose_file__button">
-                        Выбрать файл 
-                    </div>
-                    <div class="worksheet__question_line__choose_file__hint">
-                        файл не выбран
-                    </div>
+                    <input class="choose_file" name="resume_file" type="file" value="Выбрать файл">
                 </div>
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
                     Ссылка на профиль в Моем Круге
                 </div>
-                <input class="worksheet__question_line__input">
+                <input class="worksheet__question_line__input" name="Moi_krug_lnk">
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
                     Имя, Фамилия
                 </div>
-                <input class="worksheet__question_line__input">
+                <input class="worksheet__question_line__input" name="name__surname">
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
                     Телефон
                 </div>
-                <input class="worksheet__question_line__input">
+                <input class="worksheet__question_line__input" name="phonenumber">
                 <div class="worksheet__question_line__input__comment">
                     Пожалуйста, укажите код города
                 </div>
@@ -273,33 +268,26 @@
                 <div class="worksheet__question_line__question">
                     E-mail 
                 </div>
-                <input class="worksheet__question_line__input">
+                <input class="worksheet__question_line__input" name="email">
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
                     Дополнительные сведения 
                 </div>
-                <textarea class="worksheet__question_line__input_large"></textarea>
+                <textarea class="worksheet__question_line__input_large" name="extra_date"></textarea>
             </div>
             <div class="worksheet__question_line">
                 <div class="worksheet__question_line__question">
                     Откуда вы узнали о нашем предложении?
                 </div>
-                <div class="worksheet__question_line__choose_file__button">
-                    Выбрать▼
-                </div>
+                <select class="worksheet__question_line__choose_file__button" name="recommend"><option class="worksheet__question_line__choose_file__button__option" value="v0">Выбрать</option><option class="worksheet__question_line__choose_file__button__option" value="v1">от HR-менеджера Яндекса</option><option class="worksheet__question_line__choose_file__button__option" value="v2">Я.Субботник</option><option class="worksheet__question_line__choose_file__button__option" value="v3">Yet another Conference</option><option class="worksheet__question_line__choose_file__button__option" value="v4">на другой конференции</option><option class="worksheet__question_line__choose_file__button__option" value="v5">из поиска</option><option class="worksheet__question_line__choose_file__button__option" value="v6">по рекомендации</option><option class="worksheet__question_line__choose_file__button__option" value="v7">другое</option></select>
             </div>
             <div class="worksheet__agreement">
-                <input class="worksheet__agreement__checkbox" type="checkbox">Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+                <input class="worksheet__agreement__checkbox" name="personal_data" type="checkbox">Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
             </div>
             <div class="worksheet__confirm_buttons">
-                <div class="worksheet__confirm_buttons__button">
-                    Отправить
-                </div>
-                <div class="worksheet__confirm_buttons__button">
-                    Очистить
-                </div>
+                <input class="button__white__send" type="submit" value="Отправить"><input class="button__white__clear" type="reset" value="Очистить">
             </div>
-        </div>
+        </form>
     </body>
 </html>

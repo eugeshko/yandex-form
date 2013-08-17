@@ -1,9 +1,9 @@
 doctype html
-html
+html lang="ru-RU"
   head
     link rel = "stylesheet" type = "text/css" href = "application.css"
     script src = "jquery-1.10.2.min.js"  type = "text/javascript"
-    script src = "jquerry.js" type = "text/javascript"
+    script src = "application.js" type = "text/javascript"
     title Анкета второй Школы разработки интерфейсов в Москве
     meta http-equiv = "Content-type" content = "text/html; charset=UTF-8"
   body
@@ -19,63 +19,63 @@ html
         p 
           |Подробности о Школе читайте на 
           a href="http://events.yandex.ru/shri/" этой странице.
-    .worksheet
+    form.worksheet action="" method="POST" enctype="multipart/form-data"
       .worksheet__title Заполните анкету
       .worksheet__question
         .worksheet__question__number Вопрос 1
         .worksheet__question__question Год рождения.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[1]"
       .worksheet__question
         .worksheet__question__number Вопрос 2
         .worksheet__question__question Город, в котором вы живёте.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[2]"
       .worksheet__question
         .worksheet__question__number Вопрос 3
         .worksheet__question__question Вуз, факультет, специальность, кафедра.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[3]"
       .worksheet__question
         .worksheet__question__number Вопрос 4
         .worksheet__question__question Год окончания вуза.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[4]"
       .worksheet__question
         .worksheet__question__number Вопрос 5
         .worksheet__question__question 
           |Уровень владения английским языком:
         p
-          input.worksheet__question__checkbox type="checkbox" начальный;
+          input.worksheet__question__checkbox type="checkbox" name="answer[5][chekbox][1]" начальный;
         p
-          input.worksheet__question__checkbox type="checkbox" средний;
+          input.worksheet__question__checkbox type="checkbox" name="answer[5][chekbox][2]" средний;
         p
-          input.worksheet__question__checkbox type="checkbox" свободное владение.
+          input.worksheet__question__checkbox type="checkbox" name="answer[5][chekbox][3]" свободное владение.
         textarea.worksheet__question__input
       .worksheet__question
         .worksheet__question__number Вопрос 6
         .worksheet__question__question Чего вы ожидаете от участия в Школе?
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[6]"
       .worksheet__question
         .worksheet__question__number Вопрос 7
         .worksheet__question__question Откуда вы о нас узнали?
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[7]"
       .worksheet__question
         .worksheet__question__number Вопрос 8
         .worksheet__question__question Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[8]"
       .worksheet__question
         .worksheet__question__number Вопрос 9
         .worksheet__question__question Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[9]"
       .worksheet__question
         .worksheet__question__number Вопрос 10
         .worksheet__question__question Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[10]"
       .worksheet__question
         .worksheet__question__number Вопрос 11
         .worksheet__question__question Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[11]"
       .worksheet__question
         .worksheet__question__number Вопрос 12
         .worksheet__question__question Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью? С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[12]"
       .worksheet__question
         .worksheet__question__number Вопрос 13
         .worksheet__question__question 
@@ -89,7 +89,7 @@ html
             |с вашим кодом или на ваш репозиторий на 
             a href="https://github.com/" https://github.com/
             |.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[13]"
       .worksheet__question
         .worksheet__question__number Вопрос 14
         .worksheet__question__question 
@@ -109,7 +109,7 @@ html
             | с вашим кодом или на ваш репозиторий на 
             a href="https://github.com/" https://github.com/
             |.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[14]"
       .worksheet__question
         .worksheet__question__number Вопрос 15
         .worksheet__question__question 
@@ -133,36 +133,51 @@ html
             |Разработку необходимо вести на 
             a href="https://github.com/" https://github.com/
             |. В качестве ответа на вопрос пришлите ссылку на проект.
-        textarea.worksheet__question__input
+        textarea.worksheet__question__input name="answer[15]"
       .worksheet__title Расскажите нам о себе
       .worksheet__question_line
         .worksheet__question_line__question Резюме до 250 КБ 
         .worksheet__question_line__choose_file 
-          .worksheet__question_line__choose_file__button Выбрать файл 
-          .worksheet__question_line__choose_file__hint файл не выбран
+          input.choose_file type="file" name="resume_file" value="Выбрать файл"
       .worksheet__question_line
         .worksheet__question_line__question Ссылка на профиль в Моем Круге
-        input.worksheet__question_line__input
+        input.worksheet__question_line__input name="Moi_krug_lnk"
       .worksheet__question_line
         .worksheet__question_line__question Имя, Фамилия
-        input.worksheet__question_line__input
+        input.worksheet__question_line__input name="name__surname"
       .worksheet__question_line
         .worksheet__question_line__question Телефон
-        input.worksheet__question_line__input 
+        input.worksheet__question_line__input name="phonenumber"
         .worksheet__question_line__input__comment Пожалуйста, укажите код города
       .worksheet__question_line
         .worksheet__question_line__question E-mail 
-        input.worksheet__question_line__input
+        input.worksheet__question_line__input name="email"
       .worksheet__question_line
         .worksheet__question_line__question Дополнительные сведения 
-        textarea.worksheet__question_line__input_large
+        textarea.worksheet__question_line__input_large name="extra_date"
       .worksheet__question_line
         .worksheet__question_line__question Откуда вы узнали о нашем предложении?
-        .worksheet__question_line__choose_file__button 
-          |Выбрать▼
+        select.worksheet__question_line__choose_file__button name="recommend"
+          
+          option.worksheet__question_line__choose_file__button__option value="v0" 
+            |Выбрать
+          option.worksheet__question_line__choose_file__button__option value="v1" 
+            |от HR-менеджера Яндекса
+          option.worksheet__question_line__choose_file__button__option value="v2" 
+            |Я.Субботник
+          option.worksheet__question_line__choose_file__button__option value="v3" 
+            |Yet another Conference
+          option.worksheet__question_line__choose_file__button__option value="v4" 
+            |на другой конференции
+          option.worksheet__question_line__choose_file__button__option value="v5" 
+            |из поиска
+          option.worksheet__question_line__choose_file__button__option value="v6" 
+            |по рекомендации
+          option.worksheet__question_line__choose_file__button__option value="v7" 
+            |другое
       .worksheet__agreement
-        input.worksheet__agreement__checkbox type="checkbox"
+        input.worksheet__agreement__checkbox type="checkbox" name="personal_data"
         |Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
       .worksheet__confirm_buttons
-        .worksheet__confirm_buttons__button Отправить
-        .worksheet__confirm_buttons__button Очистить
+        input.button__white__send type="submit" value="Отправить"
+        input.button__white__clear type="reset" value="Очистить"

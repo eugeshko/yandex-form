@@ -36,7 +36,6 @@ form.worksheet {
 .worksheet__question__number {
   font-style: italic;
   display: inline-block;
-  float: left;
   width: 20%;
   padding: 1em 0 1em 0;
 }
@@ -44,9 +43,9 @@ form.worksheet {
 .worksheet__question__question {
   font-weight: bold;
   display: inline-block;
-  float: left;
-  width: 80%;
+  width: 78%;
   padding: 1em 0 1em 0;
+  vertical-align: top;
 }
 
 textarea.worksheet__question__input {
